@@ -1,30 +1,44 @@
-<img src="https://komarev.com/ghpvc/?username=delltaxairon&style=for-the-badge">
 
-# iron
+# Iron
 
-Iron is an much better reverse shell manager than delltaxa/ilander it is async and connects via a golang-nc client
+A simple but powerful reverse shell manager written in golang
 
-# Commands
 
-show -> displays all connections which where gathered by an async listener
-mkexploit <addr> -> generate a payload to connect to this revere shell manager (payloads from revshells.com)
-exploit <addr> or just exploit -> waits for an connection from an client
+![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
 
-# Installation
 
+## Features
+
+- Built in Payload Generator
+
+
+## Installation
+
+Install Golang from https://go.dev/
+
+Iron Installation script
 ```bash
-git clone https://github.com/delltaxa/iron
-cd iron/
+  git clone https://github.com/delltaxa/iron
+  cd iron/
+  go build .
+```
+    
+## Usage/Examples
+
+Running with default settings
+```bash
+    ./iron
 ```
 
-# Usage:
-
+Configuring Server
 ```bash
-go run .
+    ./iron addr:port
 ```
-
-or 
-
+or
 ```bash
-go run . 0.0.0.0:12345
+    ./iron :port
 ```
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
