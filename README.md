@@ -1,3 +1,5 @@
+<img src="https://komarev.com/ghpvc/?username=delltaxairon&style=for-the-badge">
+
 # iron
 
 Iron is an much better reverse shell manager than delltaxa/ilander it is async and connects via a golang-nc client
