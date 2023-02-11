@@ -4,7 +4,7 @@
 A simple but powerful reverse shell manager written in golang
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![image](https://user-images.githubusercontent.com/114283067/218270548-0517847e-01e3-4690-8c10-9009cfd3136f.png)
 
 
 ## Features
