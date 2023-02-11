@@ -20,3 +20,9 @@ cd iron/
 ```bash
 go run .
 ```
+
+or 
+
+```bash
+go run . 0.0.0.0:12345
+```
