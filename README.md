@@ -18,25 +18,25 @@ Install Golang from https://go.dev/
 
 Iron Installation script
 ```bash
-  git clone https://github.com/delltaxa/iron
-  cd iron/
-  go build .
+git clone https://github.com/delltaxa/iron
+cd iron/
+go build .
 ```
     
 ## Usage/Examples
 
 Running with default settings
 ```bash
-    ./iron
+./iron
 ```
 
 Configuring Server
 ```bash
-    ./iron addr:port
+./iron addr:port
 ```
 or
 ```bash
-    ./iron :port
+./iron :port
 ```
 ## Screenshots
 
