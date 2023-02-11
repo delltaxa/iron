@@ -48,8 +48,10 @@ func handleConnection(conn net.Conn) {
 
 	var addr string = strings.Split(conn.RemoteAddr().String(), ":")[0]
 
-	Clients = append(Clients, Client{IPAddress: addr})
-	Requests = append(Requests, addr)
+	if !contains(addr, Requests) { 
+		Clients = append(Clients, Client{IPAddress: addr})
+		Requests = append(Requests, addr)
+	}
 
 	if v_client != "" {
 		if strings.Split(conn.RemoteAddr().String(), ":")[0] == v_client || v_client=="*" {
