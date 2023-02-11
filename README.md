@@ -40,5 +40,5 @@ or
 ```
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![image](https://user-images.githubusercontent.com/114283067/218270669-28299a78-62f0-4692-be35-29c371ae5f75.png)
 
