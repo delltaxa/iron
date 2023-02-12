@@ -5,4 +5,4 @@ var logo string = Fore["BLUE"]+`
 | || o \/ \| \| |
 | ||   ( o ) \\ |
 |_||_|\\\_/|_|\_|`+Fore["GREEN"]+`
-    ->`+Fore["YELLOW"]+` v1.0.00     `+Fore["RESET"]+"\n"
+    ->`+Fore["YELLOW"]+` v1.0.01     `+Fore["RESET"]+"\n"

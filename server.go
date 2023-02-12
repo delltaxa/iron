@@ -17,31 +17,29 @@ var Clients []Client
 var Requests []string
 
 func listenf() {
-	// Listen on port 8000
 	ln, err := net.Listen("tcp", _server)
 	if err != nil {
 		fmt.Println(Fore["RED"]+"[-]", err,Fore["RESET"])
 		os.Exit(0)
 	}
 	defer ln.Close()
-
 	// Accept incoming connections
 	for {
 		conn, err := ln.Accept()
 		if err != nil {
 			continue
 		}
-
 		// Handle connection in a separate goroutine
 		go handleConnection(conn)
 	}
 }
 
 func rest() {
-	stop = false
+	// stop = false
 	v_client = ""
 }
 
+var canexit bool = true
 func handleConnection(conn net.Conn) {
 	defer conn.Close()
 	defer rest()
@@ -59,6 +57,7 @@ func handleConnection(conn net.Conn) {
 
 			fmt.Println(Fore["GREEN"]+"[+] Connection from "+Fore["BLUE"]+addr+Fore["RESET"])
 
+			canexit = false
 			var wg sync.WaitGroup
 			wg.Add(2)
 			tcpconn := conn.(*net.TCPConn)
@@ -77,6 +76,7 @@ func handleConnection(conn net.Conn) {
 				wg.Done()
 			}()
 			wg.Wait()
+			canexit = true
 			fmt.Printf("\n")
 		}
 	}
